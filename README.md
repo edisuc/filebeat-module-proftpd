@@ -2,7 +2,7 @@
 This is a module for [Filebeat](https://www.elastic.co/products/beats/filebeat) to ingest the Proftpd's xferlog log file. 
 
 ## Quick and dirty recipe to make it work: 
- * Install the filebeat package (Debian: filebeat). 
+ * Install the `filebeat` Debian package ([Install guide](https://www.elastic.co/guide/en/elasticsearch/reference/current/deb.html) for adding a Debian repository.). 
  * Follow the [Filebeat Developer guide: creating a new module](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-modules-devguide.html) to prepare a new module. 
  * First, clone the [Beats](https://github.com/elastic/beats) repository. 
  * Copy the entire `proftpd` directory (from filebeat-module-proftpd) into the `beats/filebeat/module` directory of the Beats repository. 
@@ -14,4 +14,4 @@ This is a module for [Filebeat](https://www.elastic.co/products/beats/filebeat) 
 
 This is an early revision. It works but still lacks some documentation and might have some rough edges. Feedback is very much appreciated. 
 
-It has been tested with Filebeat version 5.5.1. 
+It has been tested with Filebeat version 5.5.1 on Debian jessie and stretch. 
