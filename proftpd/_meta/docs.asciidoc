@@ -1,0 +1,3 @@
+== proftpd module
+
+This is the proftpd module.

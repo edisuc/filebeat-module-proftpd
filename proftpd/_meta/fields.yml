@@ -1,0 +1,9 @@
+- key: proftpd
+  title: "proftpd"
+  description: >
+    proftpd Module
+  fields:
+    - name: proftpd
+      type: group
+      description: >
+      fields:

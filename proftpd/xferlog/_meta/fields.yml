@@ -1,0 +1,57 @@
+- name: xferlog
+  type: group
+  description: >
+    xferlog
+  fields:
+    - name: xferTime
+      type: long
+      description: >
+        Total time in seconds for the transfer. 
+    - name: remoteHost
+      type: keyword
+      description: >
+        Remote host name.
+    - name: fileSize
+      type: long
+      description: >
+        Size of the transferred file in bytes.
+    - name: fileName
+      type: text
+      description: >
+        Name of the transferred file. 
+    - name: transferType
+      type: keyword
+      description: >
+        Single character indicating the type of transfer (a-ascii, b-binary).
+    - name: specialActionFlag
+      type: keyword
+      description: >
+        Special action taken. 
+    - name: direction
+      type: keyword
+      description: >
+        Direction of the transfer (o-outgoing, i-ingoing, d-deleted).
+    - name: accessmode
+      type: keyword
+      description: >
+        Method by which the user is logged in (a-anonymous, g-guest, r-regular). 
+    - name: username
+      type: text
+      description: >
+        Local username, or if guest, the ID string given. 
+    - name: serviceName
+      type: keyword
+      description: >
+        Name of the service being invoked, usually FTP.
+    - name: authenticationMethod
+      type: long
+      description: >
+        Method of authentication used (0-none, 1-RFC931 Authentication)
+    - name: authenticatedUserId
+      type: keyword
+      description: >
+        User id returned by the authentication method. A * is used if an authenticated user id is not available.
+    - name: completionStatus
+      type: keyword
+      description: >
+        Single character indicating the status of the transfer (c-complete, i-incomplete)
